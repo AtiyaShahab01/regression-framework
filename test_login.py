@@ -1,16 +1,4 @@
-import pytest
-from selenium import webdriver
 from selenium.webdriver.common.by import By
-
-URL = "https://www.saucedemo.com"
-
-
-@pytest.fixture
-def driver():
-    d = webdriver.Chrome()
-    d.get(URL)
-    yield d
-    d.quit()
 
 
 def login(driver, username, password):
